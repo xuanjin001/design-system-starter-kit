@@ -34,7 +34,7 @@
       <div class="slds-page-header__control slds-float_right">
         <ul class="slds-button-group-list">
           <li>
-            <button class="slds-button slds-button_outline-brand">Edit Products</button>
+            <button class="slds-button slds-button_outline-brand" id="myBtn">Edit Products</button>
           </li>
           <li>
             <button class="slds-button slds-button_outline-brand">Add Products</button>
@@ -53,11 +53,11 @@
       <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_large" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" id="myModal">
         <div class="slds-modal__container">
         <header class="slds-modal__header">
-        <button id="button"  class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" >
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
         <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
         <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
         </svg>
-        <span class="slds-assistive-text" >Close</span>
+        <span class="slds-assistive-text close">Close</span>
         </button>
         <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Modal header</h2>
         </header>
@@ -68,13 +68,14 @@
         ad veniam nulla aute est. Labore esse esse cupidatat amet velit id elit consequat minim ullamco mollit enim excepteur ea.</p>
         </div>
         <footer class="slds-modal__footer">
-        <button class="slds-button slds-button_neutral" >Cancel</button>
-        
+        <button class="slds-button slds-button_neutral close" onclick="myModal.hide">Cancel</button>
         <button class="slds-button slds-button_brand">Save</button>
         </footer>
         </div>
         </section>
         <div class="slds-backdrop slds-backdrop_open"></div>
+
+
 
 
       <!--
@@ -230,13 +231,36 @@
 
 </div>
 
-
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 
 <footer class="app-footer">Built using the <a href="https://github.com/salesforce-ux/design-system-starter-kit">{{
     shared.builtWith }}</a>.</footer>
 {% endblock %}
 
 
-<script src="/scripts/app.js"></script>
-<script src="/scripts/vendor/svg4everybody.min.js"></script>
-<script>svg4everybody();</script>

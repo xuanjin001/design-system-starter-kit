@@ -3,6 +3,7 @@
 
 'use strict'
 
+
 /**
  * These interactions are provided for prototyping use ONLY.
  *
@@ -29,6 +30,7 @@ console.log('Code in app.js is not built for accessibility, performance, or cros
  * @param {Node} element
  */
 const toggle = (element) => element.classList.toggle('slds-is-open')
+
 
 /**
  * Open / Close an element's parent
@@ -85,3 +87,16 @@ Array.from(defaultTabs).forEach((tab) => {
 Array.from(scopedTabs).forEach((tab) => {
   tab.addEventListener('click', assignTabEvents, false)
 })
+
+
+
+/**
+ * Dropdown menus
+ * https://www.lightningdesignsystem.com/components/menus/
+ */
+const closeButtons = document.querySelectorAll(' .slds-modal__close ')
+
+Array.from(closeButtons)
+  .forEach((button) =>
+    button.addEventListener('click', (event) => toggle(event.currentTarget), false)
+  )
