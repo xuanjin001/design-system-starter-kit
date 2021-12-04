@@ -22,7 +22,6 @@ whereas cloning the starter kit and putting a few components together only takes
 Deploying your prototype to Heroku for free – in only 2 clicks – is also lightning fast!
 
 ## Set-up (private) 🔒
-
 If you plan to have internal-facing work in your starter kit app that you don't want public, using a private repository is recommended. One method to achieve that is to import this Starter Kit repository into a new private one ([details](https://help.github.com/en/github/importing-your-projects-to-github/importing-a-repository-with-github-importer)):
 
 1. Open https://github.com/new/import
@@ -33,7 +32,6 @@ If you plan to have internal-facing work in your starter kit app that you don't 
 1. Once your new repository is created, move onto [Quick Start](#quick-start)
 
 ## Set-up (public)
-
 1. Fork this repository or [download it](https://github.com/salesforce-ux/design-system-starter-kit/archive/master.zip) onto your computer
 
 ## Quick Start
@@ -101,14 +99,10 @@ git checkout master
 git pull origin master
 ```
 
-Or, in GitHub Desktop, click `Fetch origin` and then `Pull origin`
+Or, in GitHub Desktop, click `Fetch origin` and then `Pull origin`.
 
 ## See Also
 
 The [Design System UI Kit](https://github.com/salesforce-ux/design-system-ui-kit/) is a great way for designers to put beautiful static prototypes together.
 
 Using React? Check out the [react branch](https://github.com/salesforce-ux/design-system-starter-kit/tree/react) (beta)!
-
-#### My notes
-
-Use this [tutorial](https://tdx-starter-kit.herokuapp.com/)
